@@ -1,0 +1,48 @@
+
+let posts = [];
+
+
+function createPost(username, content) {
+  const post = {
+    username: username,
+    content: content,
+    comments: []
+  };
+  posts.push(post);
+  console.log(`New post created by ${username}: ${content}`);
+}
+
+
+function addComment(postIndex, username, comment) {
+  if (postIndex >= 0 && postIndex < posts.length) {
+    const post = posts[postIndex];
+    const newComment = {
+      username: username,
+      comment: comment
+    };
+    post.comments.push(newComment);
+    console.log(`New comment added by ${username} on post ${postIndex}: ${comment}`);
+  } else {
+    console.log("Invalid post index.");
+  }
+}
+
+
+function viewPosts() {
+  console.log("---- All Posts ----");
+  posts.forEach((post, index) => {
+    console.log(`Post ${index}: ${post.username} - ${post.content}`);
+    console.log("Comments:");
+    post.comments.forEach(comment => {
+      console.log(`- ${comment.username}: ${comment.comment}`);
+    });
+    console.log("-------------------");
+  });
+}
+
+
+createPost("User1", "Just completed a 5-mile run!");
+createPost("User2", "Loving the new workout routine!");
+addComment(0, "User3", "Great job! Keep it up!");
+addComment(1, "User4", "I'm doing the same routine. It's amazing!");
+viewPosts();
