@@ -1,0 +1,19 @@
+
+let totalCalories = 0;
+
+
+function addFoodItem(foodName, calories) {
+  totalCalories += calories;
+  console.log(`Added ${foodName} (${calories} calories).`);
+}
+
+
+function viewTotalCalories() {
+  console.log(`Total calories consumed: ${totalCalories}`);
+}
+
+
+addFoodItem("Apple", 52);
+addFoodItem("Chicken Breast", 165);
+addFoodItem("Brown Rice", 111);
+viewTotalCalories();
