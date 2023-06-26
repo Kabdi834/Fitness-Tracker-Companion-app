@@ -1,0 +1,17 @@
+
+<html>
+<head>
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Fitness Tracker</h1>
+  
+  <div id="steps-container">
+    <h2>Steps: <span id="steps-count">0</span></h2>
+    <button id="increment-btn">Increment Steps</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
