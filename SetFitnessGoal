@@ -1,6 +1,5 @@
-// Goal Setting Functionality
 
-// Function to set a fitness goal
+
 function setFitnessGoal(goal) {
   // Store the goal in local storage or send it to the server for storage
   // You can use localStorage.setItem('fitnessGoal', goal); or make an API call here
@@ -16,9 +15,8 @@ function getFitnessGoal() {
   return goal;
 }
 
-// Example usage
-const newGoal = 'Build muscle'; // Replace with the goal set by the user
 
+const newGoal = 'Build muscle'; // 
 setFitnessGoal(newGoal);
 
 const currentGoal = getFitnessGoal();
